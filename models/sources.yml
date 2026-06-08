@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: OMNIRETAIL_DB
+    schema: BRONZE
+    tables:
+      - name: orders_raw
+      - name: customers_raw
+      - name: products_raw
+      - name: order_items_raw
+
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
