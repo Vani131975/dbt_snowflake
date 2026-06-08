@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: OMNIRETAIL_DB
+    schema: BRONZE
+
+    tables:
+      - name: orders_raw
+      - name: customers_raw
+      - name: products_raw
+      - name: order_items_raw

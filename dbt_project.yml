@@ -1,0 +1,10 @@
+models:
+  dbt_snowflake:
+
+    silver:
+      +schema: SILVER
+      +materialized: incremental
+
+    gold:
+      +schema: GOLD
+      +materialized: table
