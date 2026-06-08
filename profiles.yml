@@ -1,0 +1,13 @@
+omniretail_migration:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "NOTTJQI-LX23018"
+      user: "Helen"
+      password: "Sheshu@20051975"
+      role: "ACCOUNTADMIN"
+      database: OMNIRETAIL_DB
+      warehouse: "ETL_WH"
+      schema: dev
+      threads: 4
