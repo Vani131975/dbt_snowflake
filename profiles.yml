@@ -3,7 +3,7 @@ omniretail_migration:
   outputs:
     dev:
       type: snowflake
-      account: "NOTTJQI-LX23018"
+      account: "MSHPYGT-EY11730"
       user: "Helen"
       password: "Sheshu@20051975"
       role: "ACCOUNTADMIN"
