@@ -1,6 +1,7 @@
 {{ config(
     materialized='incremental',
-    unique_key='order_id'
+    unique_key='order_id',
+    incremental_strategy='merge'
 ) }}
 
 WITH cleaned AS (
@@ -29,8 +30,3 @@ SELECT
     order_purchase_timestamp
 FROM deduped
 WHERE rn = 1
-
-{% if is_incremental() %}
-AND order_purchase_timestamp >
-    (SELECT MAX(order_purchase_timestamp) FROM {{ this }})
-{% endif %}
